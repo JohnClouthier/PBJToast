@@ -1,0 +1,308 @@
+@charset "utf-8";
+/*
+   Assignment: Project V3
+   The PB&J Style Sheet
+   Author: John Clouthier
+   Date created:   4/23/2019
+   Filename: styles.css
+
+*/
+/* all colors decided upon I came up with on my own*/
+
+/*/*reset styles*/
+html{
+   background: transparent;
+   font-size: 110%;
+   margin: 0%;
+   padding: 0%;
+   vertical-align: baseline;
+   height: 100%;
+}
+
+   /*/* Base Styles and Layout */
+
+/*/*font styles*/
+html{font-family: 'Courier New', Courier, monospace;}
+
+/*/*navigation abbreviation and link styles*/
+a[href], abbr {
+   color: white;
+   color: rgb(255,255,255); 
+   color: hsl(0,0%,100%);
+   text-decoration: none;
+}
+a:active, a:hover {
+   background-color: teal;
+   background-color: rgb(0,128,128);
+   background-color: hsl(180,100%,25%);
+   color: lightpink;
+   color: rgb(255,127,127);
+   color: hsl(0,100%,75%);
+}
+header > nav > ul#csn, h1, .sh{
+   background-color: purple;
+   background-color: rgb(128,100,128);
+   background-color: hsl(300,12%,45%);
+   padding: 0.2em;
+   margin: 0.1em;
+   letter-spacing: 0.18em;
+   list-style-type: none;
+   text-align: center;
+   font-size: 1.4em;
+}
+ul#csn > li > a:active::before, ul#csn > li > a:hover::before{content:"🍓🍇🍓";} /*unicode characters for content*/
+ul#csn > li > a:active::after, ul#csn > li > a:hover::after{content:"🍇🍓🍇";} /*unicode characters for content*/
+.sh {font-size: .9em;}
+/*/*content styles*/
+body{ 
+   background-color: black;
+   background-color: rgb(0,0,0);
+   background-color: hsl(0,0%,0%);
+}
+article{
+   background-color: tan;
+   background-color: rgb(134,97,70);
+   background-color: hsl(25,31%,40%);
+}
+h2{
+   background-color: purple;
+   background-color: rgb(128,85,128);
+   background-color: hsl(300,20%,42%);
+   color: grey;
+   color: rgb(210,210,210);
+   color: hsl(0,0%,82%);
+   padding: 0.5em 0.5em 0.5em 0em;
+   margin: 0.08em;
+   letter-spacing: 0.16em;
+   text-align: center;
+}
+ol#rqm , p, dl, figure, div, table{
+   background-color: purple; 
+   background-color: rgb(128,75,128);
+   background-color: hsl(300,26%,40%);
+   color: grey;
+   color: rgb(200,200,200);
+   color: hsl(0,0%,78%);
+   margin: 0.08em;
+   line-height: 1.8em;
+   list-style-type: decimal;
+}
+td, dt{
+   text-align: center;
+   font-size: 1.2em;
+}
+abbr{text-decoration: none;}
+abbr#ssss:hover::after, abbr#ssss:hover::before{
+   content:"🥄🥄"; /*unicode characters for content*/
+}
+abbr#NUTS:hover::after, abbr#NUTS:hover::before{
+   content:"🥜🥜🥜🥜"; /*unicode characters for content*/
+}
+/*/* table styles and layout*/ 
+/* M6LO7 Demonstrate how to format a table with CSS */
+table, td , th, tfoot{
+   width: 33.33%;
+   border: 5px outset grey;
+   border: 5px outset rgb(200,200,200);
+   border: 5px outset hsl(0,0%,78%);
+}
+tr:nth-of-type(1) > td:nth-of-type(2){
+   background-image: linear-gradient(90deg, brown, brown, brown, brown, brown, brown, brown, purple, purple, purple, purple, purple, purple, purple, purple, purple);
+   background-image: linear-gradient(90deg, rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128));
+   background-image: linear-gradient(90deg, hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%));
+}
+tr:nth-of-type(2) > td:nth-of-type(2){
+   background-image: linear-gradient(90deg, brown, brown, brown, brown, brown, brown, brown, purple, purple, purple, purple, purple, purple, purple, purple, purple, purple, purple);
+   background-image: linear-gradient(90deg, rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128));
+   background-image: linear-gradient(90deg, hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%));
+}
+tr:nth-of-type(3) > td:nth-of-type(2){
+   background-image: linear-gradient(90deg, brown, brown, brown, brown, brown, brown, brown, brown, brown, purple, purple, purple, purple, purple, purple, purple, purple, purple, purple, purple);
+   background-image: linear-gradient(90deg, rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128));
+   background-image: linear-gradient(90deg, hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%));
+}
+tr:nth-of-type(4) > td:nth-of-type(2){
+   background-image: linear-gradient(90deg, brown, brown, brown, brown, brown, brown, brown, brown, brown, purple, purple, purple, purple, purple, purple, purple, purple, purple, purple, purple, purple);
+   background-image: linear-gradient(90deg, rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128));
+   background-image: linear-gradient(90deg, hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%));
+}
+tr:nth-of-type(5) > td:nth-of-type(2){
+   background-image: linear-gradient(90deg, brown, brown, brown, brown, brown, brown, brown, purple, purple, purple, purple, purple, purple, purple, purple, purple, purple, purple, purple);
+   background-image: linear-gradient(90deg, rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128));
+   background-image: linear-gradient(90deg, hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%));
+} 
+/* brute force */
+td > b {font-size: 0.7em;}
+
+/*/* footer styles*/ 
+footer{
+   background-color: yellow;
+   background-image: linear-gradient(-45deg, gold, yellow, gold);   
+}
+/*/* link and navigation layout*/
+a {display: block;}
+@media only screen and (min-width: 482px) {
+   header > nav > ul#csn::after{
+      clear: both;
+      content: "";
+      display: table;
+      }
+   header > nav > ul#csn > li{
+      display: block;
+      float: left;
+      width: 33.33%;
+      }
+}
+/*/*content layout*/
+body, article, h2, p, dl, ol#rqm, figure, table {
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 10px;
+}
+header > nav > ul#csn, h1{
+   width: 100%;
+   border: 5px solid purple;
+   border: 5px solid rgb(128,100,128);
+   border: 5px solid hsl(300,12%,45%);
+   border-radius: 20px;
+}
+dt {
+   border-bottom: 3px dashed grey;
+   border-bottom: 3px dashed rgb(200,200,200);
+   border-bottom: 3px dashed hsl(0,0%,78%);
+   border-top: 3px solid grey;
+   border-top: 3px solid rgb(200,200,200);
+   border-top: 3px solid hsl(0,0%,78%);
+}
+ol#rqm , p, dl, figure{
+   border-left: 6px solid purple;
+   border-left: 6px solid rgb(128,75,128);
+   border-left: 6px solid hsl(300,26%,40%);
+   border-right: 6px solid purple;
+   border-right: 6px solid rgb(128,75,128);
+   border-right: 6px solid hsl(300,26%,40%);
+}
+
+img.tst {
+   position: relative;
+   right: 3%;
+   display: block;
+}
+img.tbl{
+   width: 100%;
+}
+
+footer{
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   clear: both;
+   float: left;
+   border: 1px solid black;
+   -webkit-filter: opacity(0.3);
+   -moz-webkit-filter: opacity(0.3);
+   filter: opacity(0.3);
+}
+aside{
+   border: 4px outset gold;
+}
+abbr#NUTS{
+   display: block;
+   color: black;
+   border: 1px solid black;
+}
+
+/*/*content design*/ 
+body{
+   background: url(TOAST5SCALE2.png) 50%/ 100% 100% no-repeat fixed;
+}
+
+img{
+   box-shadow: 1px 1px 10px white, -1px -1px 10px white;
+}
+
+footer:hover{
+   -webkit-filter: opacity(1);
+   -moz-webkit-filter: opacity(1);
+   filter: opacity(1);
+   font-size: 1.5em;
+   transform: skew(18deg, 1deg);
+   clear: left;
+}
+
+   /*/* Mobile Styles and Layout */ 
+/*M5LO3 Use media queries to format a page differently for phones vs. PCs.  The media query below targets mobile devices*/
+@media only screen and (max-width: 481px) {
+/*M5LO4 Use CSS for pull-down menus  This targets the site navagation*/
+/*M5LO5 Demonstrate the use of flexboxes on a web page  Turning the site naviagtion into a flex box allows for the colapsing and flexable resizing of the navigation menues*/ 
+   header, header > nav, nav > ul.csn, a, ul > li, .abt{
+      display: -webkit-flex;
+	  display: flex;
+      align-items: stretch;
+   }
+   .sh {visibility: hidden;}
+   nav a {font-size: 80%;}
+/*M5LO7 Demonstrate use of properties of flexbox containers   The naviagation containers ensure items that are ordered vertically*/
+   ul.sh, .abt {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+   }
+   h2.abt:first-of-type{display: none;}
+   p.abt:first-of-type{display: none;}
+   h2.abt:nth-of-type(2){display: none;}
+/*M5LO6 Demonstrate use of properties of flexbox items   The about page items are reorderd on mobile to allow for the most recent updates come first for the readers to see*/
+   p.abt:nth-of-type(1){
+      -webkit-order: 100;
+      order: 100;
+   }
+   p.abt:nth-of-type(2){
+      -webkit-order: 50;
+      order: 50;
+   }
+   p.abt:nth-of-type(3){
+      -webkit-order: 25;
+      order: 25;
+   }
+   ul.anav, ul.inav, ul.innav {
+      display: none;
+      position: absolute;
+      z-index: 1;
+	  width: 30%;
+   }
+   li.anav:hover > ul.anav{
+      display: -webkit-flex;
+      display: flex;
+      visibility: visible;
+   }
+   li.inav:hover > ul.inav{
+      display: -webkit-flex;
+      display: flex;
+      visibility: visible;
+   }
+   li.innav:hover > ul.innav{
+      display: -webkit-flex;
+      display: flex;
+      visibility: visible;
+   }
+   body, article, h2, p, dl, ol#rqm, li, figure, table {
+      width: 98%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+   }
+   header, h1{width: 100%;}
+   ol#rqm{width:90%;}
+   body{background-image: none;}
+   footer{
+      filter: opacity(1);
+      font-size: 1.5em;
+      transform: skew(18deg, 1deg);
+      clear: left;
+      position: static;
+   }
+   img{width: 100%;}
+   abbr#NUTS::after, abbr#NUTS::before{content:"🥜🥜🥜🥜";} /*unicode characters for content*/
+   ul#csn > li > a::before, ul#csn > li > a::before{content:"🍓🍇🍓";} /*unicode characters for content*/
+   ul#csn > li > a::after, ul#csn > li > a::after{content:"🍇🍓🍇";} /*unicode characters for content*/
+}
