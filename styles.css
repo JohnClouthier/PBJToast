@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*
-   Assignment: Project V3
+   Assignment: Project V4
    The PB&J Style Sheet
    Author: John Clouthier
    Date created:   4/23/2019
@@ -9,7 +9,7 @@
 */
 /* all colors decided upon I came up with on my own*/
 
-/*/*reset styles*/
+  /*/* reset styles*/
 html{
    background: transparent;
    font-size: 110%;
@@ -19,12 +19,13 @@ html{
    height: 100%;
 }
 
+
    /*/* Base Styles and Layout */
 
-/*/*font styles*/
+/*/* font styles*/
 html{font-family: 'Courier New', Courier, monospace;}
 
-/*/*navigation abbreviation and link styles*/
+/*/* navigation abbreviation and link styles*/
 a[href], abbr {
    color: white;
    color: rgb(255,255,255); 
@@ -39,7 +40,7 @@ a:active, a:hover {
    color: rgb(255,127,127);
    color: hsl(0,100%,75%);
 }
-header > nav > ul#csn, h1, .sh{
+header > nav > ul#csn, h1, .nav{
    background-color: purple;
    background-color: rgb(128,100,128);
    background-color: hsl(300,12%,45%);
@@ -52,8 +53,9 @@ header > nav > ul#csn, h1, .sh{
 }
 ul#csn > li > a:active::before, ul#csn > li > a:hover::before{content:"🍓🍇🍓";} /*unicode characters for content*/
 ul#csn > li > a:active::after, ul#csn > li > a:hover::after{content:"🍇🍓🍇";} /*unicode characters for content*/
-.sh {font-size: .9em;}
-/*/*content styles*/
+.nav {font-size: .9em;}
+
+/*/* content styles*/
 body{ 
    background-color: black;
    background-color: rgb(0,0,0);
@@ -99,7 +101,6 @@ abbr#NUTS:hover::after, abbr#NUTS:hover::before{
    content:"🥜🥜🥜🥜"; /*unicode characters for content*/
 }
 /*/* table styles and layout*/ 
-/* M6LO7 Demonstrate how to format a table with CSS */
 table, td , th, tfoot{
    width: 33.33%;
    border: 5px outset grey;
@@ -131,36 +132,38 @@ tr:nth-of-type(5) > td:nth-of-type(2){
    background-image: linear-gradient(90deg, rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(134,97,70), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128), rgb(128,75,128));
    background-image: linear-gradient(90deg, hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(25,31%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%), hsl(300,26%,40%));
 } 
-/* brute force */
-td > b {font-size: 0.7em;}
+td > b {font-size: 0.7em;} /* brute force */
 
 /*/* footer styles*/ 
 footer{
    background-color: yellow;
    background-image: linear-gradient(-45deg, gold, yellow, gold);   
 }
+
 /*/* link and navigation layout*/
 a {display: block;}
-@media only screen and (min-width: 482px) {
-   header > nav > ul#csn::after{
-      clear: both;
-      content: "";
-      display: table;
-      }
-   header > nav > ul#csn > li{
-      display: block;
-      float: left;
-      width: 33.33%;
-      }
+header > nav > ul#csn::after, ul.nav::after {
+   clear: both;
+   content: "";
+   display: table;
 }
-/*/*content layout*/
+header > nav > ul#csn > li , ul.nav > li{
+   display: block;
+   float: left;
+   width: 33.33%;
+}
+ul.a > li {width: 50%;}
+ul.i  > li  {width: 33.33%;}
+ul.in  > li {width: 25%;}
+
+/*/* content layout*/
 body, article, h2, p, dl, ol#rqm, figure, table {
    width: 90%;
    margin-left: auto;
    margin-right: auto;
    border-radius: 10px;
 }
-header > nav > ul#csn, h1{
+header > nav > ul#csn, h1, .nav{
    width: 100%;
    border: 5px solid purple;
    border: 5px solid rgb(128,100,128);
@@ -183,7 +186,6 @@ ol#rqm , p, dl, figure{
    border-right: 6px solid rgb(128,75,128);
    border-right: 6px solid hsl(300,26%,40%);
 }
-
 img.tst {
    position: relative;
    right: 3%;
@@ -192,7 +194,6 @@ img.tst {
 img.tbl{
    width: 100%;
 }
-
 footer{
    position: fixed;
    bottom: 0;
@@ -217,80 +218,40 @@ abbr#NUTS{
 body{
    background: url(TOAST5SCALE2.png) 50%/ 100% 100% no-repeat fixed;
 }
-
 img{
    box-shadow: 1px 1px 10px white, -1px -1px 10px white;
 }
-
-footer:hover{
+form.f{
+   display: none;
+   visibility:hidden;
+}
+footer:hover, footer:hover form.f{
    -webkit-filter: opacity(1);
    -moz-webkit-filter: opacity(1);
    filter: opacity(1);
    font-size: 1.5em;
    transform: skew(18deg, 1deg);
    clear: left;
+   visibility: visible;
+   display: block;
 }
 
+   /*/*shhh.html reveal designs styles layout and effects*/
+/* M7LO11 Demonstrate how to format a form with CSS  Part A: These styles allow for the reveal of the link to the shhh.html page once the correct answer is given. The color change also indicates it's the right number. View <!-- Form/Interactive Styles and Layout --> section of shhh.html for Part B. */
+form  > a {display:none;}
+input#sbx:valid {background: peru url('toastblank.png') top right/contain no-repeat;}
+form:valid > a {display:block;}
+
    /*/* Mobile Styles and Layout */ 
-/*M5LO3 Use media queries to format a page differently for phones vs. PCs.  The media query below targets mobile devices*/
 @media only screen and (max-width: 481px) {
-/*M5LO4 Use CSS for pull-down menus  This targets the site navagation*/
-/*M5LO5 Demonstrate the use of flexboxes on a web page  Turning the site naviagtion into a flex box allows for the colapsing and flexable resizing of the navigation menues*/ 
-   header, header > nav, nav > ul.csn, a, ul > li, .abt{
-      display: -webkit-flex;
-	  display: flex;
-      align-items: stretch;
-   }
-   .sh {visibility: hidden;}
-   nav a {font-size: 80%;}
-/*M5LO7 Demonstrate use of properties of flexbox containers   The naviagation containers ensure items that are ordered vertically*/
-   ul.sh, .abt {
-      -webkit-flex-direction: column;
-      flex-direction: column;
-   }
-   h2.abt:first-of-type{display: none;}
-   p.abt:first-of-type{display: none;}
-   h2.abt:nth-of-type(2){display: none;}
-/*M5LO6 Demonstrate use of properties of flexbox items   The about page items are reorderd on mobile to allow for the most recent updates come first for the readers to see*/
-   p.abt:nth-of-type(1){
-      -webkit-order: 100;
-      order: 100;
-   }
-   p.abt:nth-of-type(2){
-      -webkit-order: 50;
-      order: 50;
-   }
-   p.abt:nth-of-type(3){
-      -webkit-order: 25;
-      order: 25;
-   }
-   ul.anav, ul.inav, ul.innav {
-      display: none;
-      position: absolute;
-      z-index: 1;
-	  width: 30%;
-   }
-   li.anav:hover > ul.anav{
-      display: -webkit-flex;
-      display: flex;
-      visibility: visible;
-   }
-   li.inav:hover > ul.inav{
-      display: -webkit-flex;
-      display: flex;
-      visibility: visible;
-   }
-   li.innav:hover > ul.innav{
-      display: -webkit-flex;
-      display: flex;
-      visibility: visible;
-   }
+   form{display:none;}
    body, article, h2, p, dl, ol#rqm, li, figure, table {
       width: 98%;
       margin-left: auto;
       margin-right: auto;
       border-radius: 10px;
    }
+   .nav{display: none;}
    header, h1{width: 100%;}
    ol#rqm{width:90%;}
    body{background-image: none;}
